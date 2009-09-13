@@ -42,6 +42,7 @@
 #include <limits.h>		/* for PATH_MAX and SHRT_MAX and friends */
 #include <float.h>		/* for FLT_MAX and friends */
 #include <unistd.h>		/* for SEEK_SET and friends on SunOS */
+#include <argp.h>
 #if BOW_MCHECK
 #include <mcheck.h>
 #endif /* BOW_MCHECK */
