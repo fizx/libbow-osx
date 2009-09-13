@@ -37,7 +37,6 @@
 #include <sys/types.h>		/* for netinet/in.h on SunOS */
 #include <sys/stat.h>
 #include <netinet/in.h>		/* for machine-independent byte-order */
-#include <malloc.h>		/* for malloc() and friends. */
 #include <stdlib.h>             /* For malloc() etc. on DEC Alpha */
 #include <string.h>		/* for strlen() on DEC Alpha */
 #include <limits.h>		/* for PATH_MAX and SHRT_MAX and friends */
