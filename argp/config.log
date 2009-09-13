@@ -1,0 +1,102 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:537: checking for gcc
+configure:614: checking whether the C compiler (gcc -g -O -Wall ) works
+configure:628: gcc -o conftest -g -O -Wall   conftest.c  1>&5
+configure:625: warning: return type defaults to 'int'
+configure:648: checking whether the C compiler (gcc -g -O -Wall ) is a cross-compiler
+configure:653: checking whether we are using GNU C
+configure:677: checking whether gcc accepts -g
+configure:705: checking how to run the C preprocessor
+configure:797: checking for a BSD compatible install
+configure:849: checking for ranlib
+configure:881: checking for getopt.h
+configure:891: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:923: checking for getopt_long
+configure:951: gcc -o conftest -g -O -Wall   conftest.c  1>&5
+configure:982: checking for strerror
+configure:1039: checking for strndup
+configure:1067: gcc -o conftest -g -O -Wall   conftest.c  1>&5
+configure:1051: warning: conflicting types for built-in function 'strndup'
+Undefined symbols:
+  "_strndup", referenced from:
+      _main in ccXaFEZ7.o
+ld: symbol(s) not found
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 1044 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char strndup(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char strndup();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_strndup) || defined (__stub___strndup)
+choke me
+#else
+strndup();
+#endif
+
+; return 0; }
+configure:1094: checking for ANSI C header files
+configure:1107: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1174: gcc -o conftest -g -O -Wall   conftest.c  1>&5
+configure: In function 'main':
+configure:1169: warning: implicit declaration of function 'exit'
+configure:1169: warning: incompatible implicit declaration of built-in function 'exit'
+configure:1198: checking for ssize_t
+configure:1235: checking for memmove
+configure:1263: gcc -o conftest -g -O -Wall   conftest.c  1>&5
+configure:1247: warning: conflicting types for built-in function 'memmove'
+configure:1235: checking for vsnprintf
+configure:1263: gcc -o conftest -g -O -Wall   conftest.c  1>&5
+configure:1247: warning: conflicting types for built-in function 'vsnprintf'
+configure:1292: checking for strerror
+configure:1349: checking for strings.h
+configure:1359: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1390: checking if vsprintf returns int
+configure:1404: gcc -o conftest -g -O -Wall   conftest.c  1>&5
+configure:1397: warning: return type defaults to 'int'
+configure: In function 'main':
+configure:1398: warning: implicit declaration of function 'malloc'
+configure:1398: warning: incompatible implicit declaration of built-in function 'malloc'
+configure:1399: warning: implicit declaration of function 'vsprintf'
+configure:1400: warning: implicit declaration of function 'exit'
+configure:1400: warning: incompatible implicit declaration of built-in function 'exit'
+configure: failed program was:
+#line 1396 "configure"
+#include "confdefs.h"
+main() {
+	char *buf = malloc(16);
+	if (2 == (int)vsprintf(buf, "12"))
+	  exit (0);
+	exit (-1);}
+configure:1426: checking program_invocation_name
+configure:1435: gcc -o conftest -g -O -Wall   conftest.c  1>&5
+configure: In function 'main':
+configure:1431: error: nested functions are disabled, use -fnested-functions to re-enable
+configure: In function 'foo':
+configure:1431: error: 'program_invocation_name' undeclared (first use in this function)
+configure:1431: error: (Each undeclared identifier is reported only once
+configure:1431: error: for each function it appears in.)
+configure: failed program was:
+#line 1428 "configure"
+#include "confdefs.h"
+
+int main() {
+void foo() {program_invocation_name = "foo";}
+; return 0; }
+configure:1455: checking for ANSI C header files
+configure:1562: checking for string.h
+configure:1572: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1562: checking for memory.h
+configure:1572: gcc -E  conftest.c >/dev/null 2>conftest.out
