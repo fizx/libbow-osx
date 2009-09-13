@@ -1,5 +1,4 @@
-# Generated automatically from Makefile.in by configure.
-#   Generated automatically from Makefile.in by configure.
+#   Makefile.  Generated from Makefile.in by configure.
 #
 #   Makefile for the "Bag Of Words Library", libbow.
 #   Copyright (C) 1996, 1997, 1998, 1999 Andrew McCallum
@@ -30,6 +29,7 @@ SHELL = /bin/sh
 default: all
 
 srcdir = .
+
 RANLIB = ranlib
 INSTALL = /opt/local/bin/ginstall -c
 INSTALL_PROGRAM = ${INSTALL}
@@ -42,12 +42,12 @@ FLEX = flex
 
 CC = gcc
 
-DEFS =  -DHAVE_STRERROR=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_RANDOM=1 -DHAVE_SRANDOM=1 -DHAVE_SETENV=1 -DHAVE_STRCHR=1 -DHAVE_STRRCHR=1 -DHAVE_LOG2F=1 -DHAVE_SQRTF=1 -DHAVE_ALLOCA_H=1 
+DEFS = -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DYYTEXT_POINTER=1 -DHAVE_STRERROR=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_RANDOM=1 -DHAVE_SRANDOM=1 -DHAVE_SETENV=1 -DHAVE_STRCHR=1 -DHAVE_STRRCHR=1 -DHAVE_LOG2F=1 -DHAVE_SQRTF=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_ALLOCA_H=1
 LIBS = 
 
 # All these are optional.  You can redifine CFLAGS, CPPFLAGS,
 # INCLUDEFLAGS and LDFLAGS on the command line however you like.
-CFLAGS = -g -O -Wall -Wimplicit
+CFLAGS = -g -O -Wall -Wimplicit -fnested-functions
 CPPFLAGS = 
 INCLUDEFLAGS =
 LDFLAGS =
@@ -101,7 +101,7 @@ all: libbow.a $(DEMO_EXECUTABLES) $(PERL_RUNNABLE_FILES) kl-div
 # Pattern rule
 ALL_CPPFLAGS = $(CPPFLAGS) $(INCLUDEFLAGS) -Ibow -I$(srcdir) -I$(srcdir)/argp $(DEFS)
 ALL_CFLAGS = $(CFLAGS)
-ALL_LIBS = $(LIBS) -L. -lbow -L./argp -largp -lm -lcrypt
+ALL_LIBS = $(LIBS) -L. -lbow -L./argp -largp -lm -lcrypto
 
 
 # Libbow section

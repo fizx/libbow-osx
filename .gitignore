@@ -1,2 +1,10 @@
 config.log
 *.o
+archer
+argp/libargp.a
+arrow
+autom4te.cache/
+crossbow
+kl-div
+libbow.a
+rainbow

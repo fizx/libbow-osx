@@ -406,8 +406,8 @@ double calculate_b(double *s, int *yvect, double *a, float *cvect, int ndocs) {
   int i,j;
   double b, maxgrad, mingrad;
 
-  mingrad = MAXDOUBLE;
-  maxgrad = -1*MAXDOUBLE;
+  mingrad = DBL_MAX;
+  maxgrad = -1*DBL_MAX;
 
   b = 0;
   for (j=i=0; i<ndocs; i++) {
@@ -428,7 +428,7 @@ double calculate_b(double *s, int *yvect, double *a, float *cvect, int ndocs) {
   if (j) {
     return (b/j);
   } else {
-    assert(maxgrad != MAXDOUBLE);
+    assert(maxgrad != DBL_MAX);
     return ((maxgrad+mingrad)/2);
   }
 }

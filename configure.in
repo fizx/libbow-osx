@@ -6,7 +6,7 @@ AC_INIT(int4str.c)
 # Let the user set CPPFLAGS and CFLAGS on the ./configure command-line
 AC_SUBST(CPPFLAGS)
 if test -z "$CFLAGS" ; then
-  CFLAGS="-g -O -Wall -Wimplicit"  #provide a default for CFLAGS
+  CFLAGS="-g -O -Wall -Wimplicit -fnested-functions"  #provide a default for CFLAGS
 fi
 AC_SUBST(CFLAGS)
 

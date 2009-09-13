@@ -191,7 +191,7 @@ double calc_eta_hi(int ex1, int ex2, double L, double H, double k11, double k12,
   } else if (Lf < Hf - svm_epsilon_crit) {
     return H;
   } else {
-    return MAXDOUBLE;
+    return DBL_MAX;
   }
 }
 
@@ -288,7 +288,7 @@ int opt_pair(int ex1, int ex2, struct svm_smo_model *ms) {
     }
   } else {
     a2 = calc_eta_hi(ex1, ex2, L, H, k11, k12, k22, ms);
-    if (a2 == MAXDOUBLE)
+    if (a2 == DBL_MAX)
       return 0;
   }
 
@@ -336,8 +336,8 @@ int opt_pair(int ex1, int ex2, struct svm_smo_model *ms) {
     double a, aold, C, e;
     struct set *s;
 
-    ms->bup = MAXDOUBLE;
-    ms->blow = -1*MAXDOUBLE;
+    ms->bup = DBL_MAX;
+    ms->blow = -1*DBL_MAX;
 
     for (j=0, i=ex1, a=a1, aold=ao1, y=y1, C=C1, e=e1; 
 	 j<2; 
@@ -624,7 +624,7 @@ int smo(bow_wv **docs, int *yvect, double *weights, double *a_b, double **W,
     nitems = model.I0.ilength;
     items = model.I0.items;
 
-    for (i=0, e=-1*MAXDOUBLE; i<nitems; i++) {
+    for (i=0, e=-1*DBL_MAX; i<nitems; i++) {
       if (e < error[items[i]]) {
 	e = error[items[i]];
 	efrom = items[i];
@@ -633,7 +633,7 @@ int smo(bow_wv **docs, int *yvect, double *weights, double *a_b, double **W,
     model.blow = e;
     model.ilow = efrom;
     
-    for (i=0, e=MAXDOUBLE; i<nitems; i++) {
+    for (i=0, e=DBL_MAX; i<nitems; i++) {
       if (e > error[items[i]]) {
 	e = error[items[i]];
 	efrom = items[i];
